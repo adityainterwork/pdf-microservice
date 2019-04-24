@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+    <style>
+        .table-condensed {
+            font-size: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style='display:none'>
+
+        <!--> Brand header image</!-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Ranbaxy_Logo.svg">
+         <!--> footer image(powered by interwork)</!-->
+         <img src="https://dfm.nrr.mybluehost.me/wp-content/uploads/2018/09/Logo-IW_jpg.jpg">
+    </div>
+
+    <div align="center">
+        <h5>TRANSACTION INFORMATION</h5>
+    </div>
+    <br>
+    <h6>Report Date :{{date "MM/DD/YYYY hh:mm A"}}</h6>
+    <br>
+    <table class="table table-condensed table-bordered">
+        <tbody>
+            <thead>
+                <tr>
+                    <td><strong>Transaction Date </strong> </td>
+                    <td><strong>Shipment Date </strong></td>
+                    <td><strong>Seller Name </strong></td>
+                    <td><strong>Seller Address </strong></td>
+                    <td><strong>Buyer Name </strong></td>
+                    <td><strong>Buyer Address </strong></td>
+                    <td><strong>Name of the drug </strong></td>
+                    <td><strong>National Drug Code Number of the drug </strong></td>
+                    <td><strong>Strength of the drug </strong></td>
+                    <td><strong>Dosage form of the drug </strong></td>
+                    <td><strong>Lot Number of the drug </strong></td>
+                    <td><strong>Number of containers </strong></td>
+                    <td><strong>Container size </strong></td>
+                </tr>
+            </thead>
+            {{#each data}}
+            <tr>
+
+                <td>{{moment TD format="MM/DD/YYYY"}}</td>
+                <td>{{moment SD format="MM/DD/YYYY"}}</td>
+                <td>{{SN}}</td>
+                <td>{{SA}}</td>
+                <td>{{BN}}</td>
+                <td>{{BA}}</td>
+                <td>{{ND}}</td>
+                <td>{{NDC}}</td>
+                <td>{{SOD}}</td>
+                <td>{{DF}}</td>
+                <td>{{LN}}</td>
+                <td>{{NC}}</td>
+                <td>{{CS}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

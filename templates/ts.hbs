@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
+    <style>
+        .table-condensed {
+            font-size: 12px;
+         
+        }
+
+      
+    </style>
+</head>
+
+<body>
+
+    <div style='display:none'>
+
+        <!--> Brand header image</!-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Ranbaxy_Logo.svg">
+         <!--> footer image(powered by interwork)</!-->
+         <img src="https://dfm.nrr.mybluehost.me/wp-content/uploads/2018/09/Logo-IW_jpg.jpg">
+    </div>
+   
+    <div align="center">
+        <h3>TRANSACTION STATEMENT</h3>
+    </div>
+<br>
+<h5>Report Date :{{date "MM/DD/YYYY hh:mm A"}}</h5>
+<br>
+     <div align="center">
+        <table width="610" class="table-bordered table-condensed">
+     <tbody>
+         <tr>
+            <td >Seller authorized under DSCSA with state/Federal licence?</td>
+                <td >
+                    <strong>{{data.SL}}</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td >Buyer authorized under DSCSA with state/Federal licence? </td>
+                <td width="15%"><strong>{{data.BL}}</strong></td>
+            </tr>
+            <tr>
+                <td >
+                    Buyer received TI &amp; TS (transaction information &amp; transaction statement of seller)? </td>
+                <td >
+                    <strong>{{data.BR}}</strong>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+   </div>
+</body>
+
+</html>
